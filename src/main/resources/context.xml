@@ -9,10 +9,10 @@
 http://www.springframework.org/schema/beans
 http://www.springframework.org/schema/context ">
 
-<!--    another method for BPP @ConstructInit - scan and add BPPs   -->
+<!--    another method for BPP @PostConstruct - scan and add BPPs   -->
 <!--    <context:component-scan base-package="quoters"/>-->
 
-<!--    another method for BPP @ConstructInit - add five more BPPs  -->
+<!--    another method for BPP @PostConstruct - add five more BPPs  -->
 <!--    <context:annotation-config></context:annotation-config>-->
 
     <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>
