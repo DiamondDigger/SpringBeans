@@ -17,11 +17,12 @@ public class InjectRandomIntAnnotationBeanPostProcessor implements BeanPostProce
                 int max = annotation.max();
                 Random random = new Random();
                 int i = min + random.nextInt(max - min);
+                //помещаем значение в поле бина
                 field.setAccessible(true);
                 ReflectionUtils.setField(field, bean, i);
             }
         }
-        return fields;
+        return bean;
     }
 
     public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
