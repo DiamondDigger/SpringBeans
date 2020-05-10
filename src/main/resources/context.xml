@@ -9,8 +9,8 @@
 http://www.springframework.org/schema/beans
 http://www.springframework.org/schema/context ">
 
-    <context:component-scan base-package="quoters"/>
-<!--    <context:annotation-config></context:annotation-config>-->
+<!--    <context:component-scan base-package="quoters"/>-->
+    <context:annotation-config></context:annotation-config>
 <!--    <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>-->
     <bean class="quoters.InjectRandomIntAnnotationBeanPostProcessor"/>
 
