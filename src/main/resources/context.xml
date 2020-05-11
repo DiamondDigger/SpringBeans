@@ -14,9 +14,10 @@ http://www.springframework.org/schema/context ">
 
 <!--    another method for BPP @PostConstruct - add five more BPPs  -->
     <context:annotation-config/>
+    <!--    <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>-->
 
+    <bean class="quoters.PostProxyInvokerContextListener"/>
     <bean class="quoters.ProfilingHandlerBeanPostProcessor"/>
-<!--    <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>-->
     <bean class="quoters.InjectRandomIntAnnotationBeanPostProcessor"/>
 
     <bean class="quoters.TerminatorQuoter" id="terminatorQuoter">
