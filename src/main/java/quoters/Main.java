@@ -10,7 +10,7 @@ public class Main {
         //доступ к бину
         while (true) {
             // чтобы не мерцало
-            Thread.sleep(100);
+            Thread.sleep(500);
             // получаем бин по интерфейсу, который он наследует класс (с классом может случиться что угодно)
             context.getBean(Quoter.class).sayQuote();
         }
