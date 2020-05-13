@@ -16,6 +16,7 @@ http://www.springframework.org/schema/context ">
     <context:annotation-config/>
     <!--    <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>-->
 
+    <bean class="quoters.DeprecationHandlerBeanFactoryPostProcessor"/>
     <bean class="quoters.PostProxyInvokerContextListener"/>
     <bean class="quoters.ProfilingHandlerBeanPostProcessor"/>
     <bean class="quoters.InjectRandomIntAnnotationBeanPostProcessor"/>
