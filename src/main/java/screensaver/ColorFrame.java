@@ -20,7 +20,8 @@ public class ColorFrame extends JFrame {
 
     public void showOnRandomPlace(){
         Random random = new Random();
-        setLocation(random.nextInt(1200),random.nextInt(600));
+        setLocation(random.nextInt(1600),random.nextInt(800));
         getContentPane().setBackground(color);
+        repaint();
     }
 }
