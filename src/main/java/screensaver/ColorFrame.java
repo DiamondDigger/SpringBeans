@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.Random;
 
 public class ColorFrame extends JFrame {
     @Autowired
@@ -16,6 +17,8 @@ public class ColorFrame extends JFrame {
     }
 
     public void ShowOnRandomPlace(){
-
+        Random random = new Random();
+        setLocation(random.nextInt(1200),random.nextInt(600));
+        getContentPane().setBackground(color);
     }
 }
