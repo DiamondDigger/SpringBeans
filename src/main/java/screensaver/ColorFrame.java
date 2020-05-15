@@ -1,15 +1,13 @@
 package screensaver;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 import javax.swing.*;
 import java.awt.*;
 import java.util.Random;
 
-@Service
-@Scope("prototype")
+@Component
 public class ColorFrame extends JFrame {
     @Autowired
     private Color color;
