@@ -1,6 +1,7 @@
 package screensaver;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import javax.swing.*;
@@ -8,9 +9,11 @@ import java.awt.*;
 import java.util.Random;
 
 @Component
-public class ColorFrame extends JFrame {
+@Scope("prototype")
+public abstract class ColorFrame extends JFrame {
     @Autowired
     private Color color;
+    private int sizeNumber;
 
     public ColorFrame() {
         setSize(200, 200);
@@ -18,10 +21,27 @@ public class ColorFrame extends JFrame {
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     }
 
+    public ColorFrame(int sizeNumber){
+        this.sizeNumber = sizeNumber;
+        setSize(sizeNumber*100, sizeNumber*200);
+        setVisible(true);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+    }
+
+    public int getNumOfFrames() {
+        return sizeNumber;
+    }
+
+    public void setNumOfFrames(int sizeNumber) {
+        this.sizeNumber = sizeNumber;
+    }
+
     public void showOnRandomPlace(){
         Random random = new Random();
         setLocation(random.nextInt(1700),random.nextInt(800));
-        getContentPane().setBackground(color);
+        getContentPane().setBackground(getColor());
         repaint();
     }
+
+    protected abstract Color getColor();
 }
