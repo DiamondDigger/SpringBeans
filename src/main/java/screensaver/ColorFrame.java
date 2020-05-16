@@ -15,15 +15,15 @@ public abstract class ColorFrame extends JFrame {
     private Color color;
     private int sizeNumber = 3;
 
-    public ColorFrame() {
-        setSize(200, 200);
-        setVisible(true);
-        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-    }
+//    public ColorFrame() {
+//        setSize(200, 200);
+//        setVisible(true);
+//        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+//    }
 
     public ColorFrame(int sizeNumber) {
         this.sizeNumber = sizeNumber;
-        setSize(this.sizeNumber * 100, this.sizeNumber * 200);
+        setSize(this.sizeNumber * 100, this.sizeNumber * 100);
         setVisible(true);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     }

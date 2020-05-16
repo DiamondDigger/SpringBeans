@@ -17,7 +17,7 @@ public class Config {
 
     @Bean
     public ColorFrame frame(){
-        return new ColorFrame() {
+        return new ColorFrame(2) {
             @Override
             protected Color getColor() {
                 return color();
@@ -28,10 +28,8 @@ public class Config {
     public static void main(String[] args) throws InterruptedException {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
         while (true) {
-            ColorFrame bean = context.getBean(ColorFrame.class);
-            bean.showOnRandomPlace();
-//            context.getBean(ColorFrame.class).showOnRandomPlace();
-            Thread.sleep(50);
+            context.getBean(ColorFrame.class).showOnRandomPlace();
+            Thread.sleep(100);
         }
     }
 }
