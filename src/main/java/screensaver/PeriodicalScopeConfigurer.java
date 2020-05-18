@@ -21,9 +21,9 @@ public class PeriodicalScopeConfigurer implements Scope {
             int timeOfBeanLiving = now().getSecond() - pair.getKey().getSecond();
             if (timeOfBeanLiving > 3) {
                 map.put(name, new Pair(now(), objectFactory.getObject()));
-            } else {
-                map.put(name,new Pair(now(), objectFactory.getObject()));
             }
+        } else {
+            map.put(name,new Pair(now(), objectFactory.getObject()));
         }
         return map.get(name).getValue();
     }
