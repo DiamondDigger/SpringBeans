@@ -7,6 +7,6 @@ import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 public class CustomScopeRegistryBeanFactoryPostProcessor implements BeanFactoryPostProcessor {
     @Override
     public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException {
-        beanFactory.registerScope("periodical",new PeriodicalScopeConfigurer);
+        beanFactory.registerScope("periodical",new PeriodicalScopeConfigurer());
     }
 }
