@@ -1,7 +1,6 @@
 package screensaver;
 
 import javafx.util.Pair;
-import org.omg.CORBA.Object;
 import org.springframework.beans.factory.ObjectFactory;
 import org.springframework.beans.factory.config.Scope;
 
