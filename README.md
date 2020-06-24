@@ -5,3 +5,4 @@
 
 Часть 2: https://www.youtube.com/watch?v=cou_qomYLNU
 
+<img src="src/main/resources/springBeans.png">
